@@ -43,8 +43,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_4h5yc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_4h5yc.bin \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_sr259.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_sr259.bin
 
-# MFC (Multi Format Codec) firmware - from M105FDDU3CTK3
-# Version information: "MFC v10.11, F/W: 19yy, 02mm, 08dd"
+# MFC (Multi Format Codec) firmware - from A305FDDU6CUI3
+# Version information: "MFC v10.11, F/W: 20yy, 08mm, 31dd"
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin
 
