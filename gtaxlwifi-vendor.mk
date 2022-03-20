@@ -87,15 +87,16 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/system_ext/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptX_encoder.so \
     vendor/samsung/gtaxlwifi/proprietary/system_ext/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptXHD_encoder.so
 
-# GPS - from P580ZSS1CTI1
-# Modifications made to gpsd to get it to work:
+# GPS - gpsd and gps.default.so from A810SKSS2CTI1, libwrappergps.so from P610XXU2DVA6
+# Modifications made to gpsd to get it to run:
 #  * SSLv3_client_method has been replaced with SSLv23_method:
 #  $ sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" gpsd
 #  * The android.hidl.base@1.0 dependency has been removed using patchelf:
 #  $ patchelf --remove-needed android.hidl.base@1.0.so gpsd
-# No modifications were made to gps.default.so.
+# No modifications were made to gps.default.so and libwrappergps.so.
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/lib/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gps.default.so \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/lib64/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gps.default.so \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/lib64/libwrappergps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwrappergps.so \
     vendor/samsung/gtaxlwifi/proprietary/vendor/bin/hw/gpsd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gpsd
 
 # Sensors - from P580ZSS1CTI1
